@@ -6,13 +6,11 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Portfolio from './components/portfolio';
+import ContactForm from './components/ContactForm'
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <Portfolio/>
-    </>
+    <Controller/>
   );
 }
 

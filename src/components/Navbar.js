@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Navbar = () => {
+export const Navbar = ({ currentPage, handlePageChange }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
@@ -11,21 +11,17 @@ export const Navbar = () => {
       
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav justify-content-end">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home</a>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#about"onClick={()=>handlePageChange('About')}className={currentPage==='About'?'nav-link active':'nav-link'}>About Me</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">About Me</a>
+              <a className="nav-link" href="#portfolio"onClick={()=>handlePageChange('Portfolio')}className={currentPage==='Portfolio'?'nav-link active':'nav-link'}>Portfolio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Portfolio</a>
+              <a className="nav-link" href="#contact"onClick={()=>handlePageChange('Contact')}className={currentPage==='Contact'?'nav-link active':'nav-link'}>Contact</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Resume</a>
-            </li>
+
            
 
           </ul>
